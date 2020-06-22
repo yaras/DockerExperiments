@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ws1:
+    build: ws1/.
+    ports:
+      - "5000:80"
+    environment:
+      URL: http://nginx
+
+  nginx:
+    image: "nginx"
+    ports:
+      - "4000:80"
